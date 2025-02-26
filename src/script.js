@@ -8,17 +8,23 @@ let track = document.querySelector("#track");
 
 dino.style.position = "absolute"; 
 dino.style.top = "300px"; 
+let isJumping = false;
 
 document.addEventListener("keyup", (e) => {
      console.log(e.key);
-    if (e.key === 'ArrowUp') {
+    if (e.key === 'ArrowUp' && !(isJumping)) {
        jump();
+       dino.style.top = "300px";
     }
 });
 
 function jump() {
-     let currentTop = parseInt(dino.style.top) || 300; 
+    isJumping = true;
+     let currentTop = parseInt(dino.style.top); 
      dino.style.top = `${currentTop + 50}px`
-        setTimeout(() => { dino.style.top = `${currentTop - 50}px`;} , 1000)
+        setTimeout(() => { 
+            dino.style.top = `${currentTop - 50}px`;
+            isJumping = false;
+        } , 100)
        
 }

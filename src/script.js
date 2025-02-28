@@ -6,25 +6,15 @@ let dino = document.querySelector('#dino');
 let tree = document.querySelector("#tree");
 let track = document.querySelector("#track");
 
-dino.style.position = "absolute"; 
-dino.style.top = "300px"; 
+// dino.style.position = "absolute"; 
 let isJumping = false;
 
-document.addEventListener("keyup", (e) => {
-     console.log(e.key);
-    if (e.key === 'ArrowUp' && !(isJumping)) {
-       jump();
-       dino.style.top = "300px";
-    }
-});
-
-function jump() {
-    isJumping = true;
-     let currentTop = parseInt(dino.style.top); 
-     dino.style.top = `${currentTop + 50}px`
-        setTimeout(() => { 
-            dino.style.top = `${currentTop - 50}px`;
-            isJumping = false;
-        } , 100)
-       
+async function dinoJump(){
+   setTimeout(() => {
+      dino.style.top = "700px";
+   } ,500)
+   setTimeout(() => {
+      dino.style.top = "780px";
+   }, 1100 )
 }
+addEventListener("keyup", dinoJump)

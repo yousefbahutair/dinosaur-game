@@ -1,6 +1,6 @@
 .dino{
     position: absolute;
-    bottom: 0px;
+    top: 780px;
     left: 0;
     height: 70px;
     width: 70px;
@@ -10,4 +10,10 @@
     position: absolute;
     bottom: 0px;
     left: 0;
+}
+.tree{
+    position: absolute;
+    top: 780px;
+    left: 800px;
+    transition: left 0.5s ease-out;
 }

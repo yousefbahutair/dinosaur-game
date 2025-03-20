@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <canvas></canvas>
-  <img class="dino" id="dino" src="../assets/gifs/DinoWalk.gif">
-  <img class="tree" id="tree" src="../assets/images/SmallCactus3.png">
-  <img class="track" id="track" src="../assets/images/Track.png">
-  <button></button>
-  <script src="script.js"></script>
+    <div id="game">
+        <div id="score">Score: 0</div>
+        <div id="ground"></div>
+        <img id="dino" src="assets/images/DinoStart.png">
+        <div id="game-over">
+            Game Over!<br>
+            Score: <span id="final-score">0</span><br>
+            Press Space to restart
+        </div>
+    </div>
 </body>
 </html>

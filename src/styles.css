@@ -1,19 +1,44 @@
-.dino{
-    position: absolute;
-    top: 780px;
-    left: 0;
-    height: 70px;
-    width: 70px;
-    transition: top  0.5s ease-out;
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #f7f7f7;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.track{
-    position: absolute;
-    bottom: 0px;
-    left: 0;
+
+#game {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    overflow: hidden;
 }
-.tree{
+
+#dino {
     position: absolute;
-    top: 780px;
-    left: 800px;
-    transition: left 0.5s ease-out;
+    bottom: 24px;
+    left: 50px;
+    width: 44px;
+    height: 44px;
+    z-index: 2;
+    transition: transform 0.1s;
+}
+
+.cactus {
+    position: absolute;
+    bottom: 24px; 
+    right: -20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#ground {
+    position: absolute;
+    bottom: 0;
+    width: 2400px;
+    height: 24px;
+    background: url('../assets/images/Track.png') repeat-x;
+    animation: groundMove 4s linear infinite;
 }
